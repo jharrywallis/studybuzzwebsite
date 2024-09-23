@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+header{
+    background-color: #000000;
+    text-align: left;
+    padding: 10px 0;
+    border: solid #7134ff;
+    border-radius: 5px;
+}
+
+li{
+    padding: 0 10px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: #1876b4;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+}
+
+.nav-branding img{
+    max-width: 60%;
+}
+
+.nav-link:hover{
+    color: #1876b4;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 10px; /* Space between elements */
+    position: absolute; /* Position the nav-right absolutely */
+    right: 20px; /* Distance from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.hamburger {
+    display: none; /* Initially hidden, shown on smaller screens */
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.snipcart-checkout {
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    margin: 0; /* Removed margin */
+}
+
+.signinup {
+    background-color: #7134ff; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px; /* Rounded button */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.signinup:hover {
+    background-color: #5b28cc; /* Darker shade on hover */
+}
+
+/* Ensure to position the navbar */
+.navbar {
+    position: relative; /* Ensure the nav-right is positioned relative to the navbar */
+}
+
+
+.products {
+    display: flex;
+    justify-content: center; /* Center the product horizontally */
+    align-items: center; /* Center the product vertically */
+}
+
+.product {
+    background-color: #000000; /* White background for the product card */
+    border: 5px solid #7134ff; /* Thin purple border */
+    border-radius:  25px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    padding: 20px;
+    margin: 10px; /* Space around the product card */
+    margin-top: 20px;
+    width: 500px; /* Set a fixed width for consistency */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.product:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.product h1 {
+    font-size: 2.5em;
+    color: #ffffff; /* Darker text for visibility */
+}
+
+.product p {
+    font-size: 2em;
+    color: #ffffff; /* Grey text for description */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Slight rounding on the image */
+}
+
+.buy-btn {
+    background-color: #7134ff; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px; /* Rounded button */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 10px; /* Space between button and product details */
+}
+
+.buy-btn:hover {
+    background-color: #5b28cc; /* Darker shade on hover */
+}
+
+@media (max-width: 1000px){
+    
+    .nav-right {
+        position: absolute; /* Keep it absolute for positioning */
+        right: 10px; /* Closer to the right edge */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        gap: 5px; /* Reduce gap between items for tighter grouping */
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: row;
+        background-color: #000000;
+        width: 70%;
+      
+        text-align: right;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-branding img{
+        max-width: 100%;
+    }
+}
+
+.cart{
+    display: flex;  
+    position: relative;
+    align-items: center;
+    border: none;
+    justify-content: space-between;
+}
+
+.cart img{
+    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Additional styles to align the cart and hamburger */
+
+
+.snipcart-checkout,
+.signinup {
+    display: flex; /* Ensure buttons are flex items */
+    align-items: center; /* Center items within buttons */
+}
+

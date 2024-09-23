@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+
+    <title>Responsive header</title>
+</head>
+<body>
+   
+
+    
+    <header>
+        <nav class="navbar">
+          <!-- Logo -->
+          <a href="#" class="nav-branding">
+            <img src="assets/buzzlogo.png" alt="logo">
+          </a>
+          <div class="nav-right"></div>
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          <!-- Navigation Links -->
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="products.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+      
+          
+            
+            <!-- Shopping Cart -->
+            <div class="cart">
+              <button class="header__checkout snipcart-checkout">
+                <img src="assets/shoppingcart.png" alt="cart-btn">
+              </button>
+              <span class="snipcart-items-count"></span>
+              <span class="snipcart-total-price"></span>
+            </div>
+          </div>
+          <button class="snipcart-customer-signin signinup">My account</button>
+        </nav>
+        
+      </header>
+      
+    <script src="script.js"></script>
+<section>
+    
+    <picture>
+    <!-- Mobile image with specific size -->
+    <source media="(max-width: 1000px)" srcset="assets/mobilepage.png" sizes="100vw">
+    <img src="assets/main.png" alt="desktoppage" style="width: 100%;">
+    </picture>
+
+</section>
+<div class="products">
+    <div class="product">
+    <h1>Study Buzz Blend</h1>
+    <br>
+    <p>A nootropic blend to help you focus and concentrate</p>
+    <br>
+<img src="assets/productimg.png" alt="product">
+
+<button class="snipcart-add-item buy-btn"
+  data-item-id="1"
+  data-item-price="20.00"
+  data-item-url="/"
+  data-item-description="A nootropic blend to help you focus and concentrate"
+  data-item-image="assets/productimg.png"
+  data-item-name="Study Buzz Blend"
+  data-item-quantity="1">
+  Add to cart
+
+</button>
+
+</div>
+</div>
+
+<section>
+  <picture>
+    <!-- Mobile image with specific size -->
+    <source media="(max-width: 1000px)" srcset="assets/recipe.png" sizes="100vw">
+    <img src="assets/recipe.png" alt="recipe" style="width: 100%;">
+    </picture>
+</section>
+
+<script>
+    window.SnipcartSettings = {
+        publicApiKey: 'MTcxNDEwYzEtZjRmNS00NTgxLTk1YzAtZTE3YjU0MTZhNjc1NjM4NjI0NDQzMDYwNzc1NDcx',
+        loadStrategy: 'on-user-interaction',
+        currency: 'gbp',
+        version: '3.7.1',
+        addProductBehavior: 'none',
+        modalStyle: 'side',
+        
+    };
+
+    
+    
+(()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+</script>
+
+</body>
+</html>
