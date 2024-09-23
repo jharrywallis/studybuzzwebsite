@@ -62,6 +62,7 @@ a{
 .hamburger {
     display: none; /* Initially hidden, shown on smaller screens */
     cursor: pointer;
+    margin: 5px;
 }
 
 .bar {
